@@ -45,7 +45,7 @@ Standard ML models achieve high accuracy but **fail to detect fraud** due to cla
 | Before Sampling | Very Low | Poor |
 | After SMOTE | **Significantly Improved** | **Improved** |
 
-> ⚠️ Accuracy alone was misleading; recall and F1-score provided meaningful insights.
+>  Accuracy alone was misleading; recall and F1-score provided meaningful insights.
 
 ---
 

@@ -14,35 +14,38 @@ Standard ML models achieve high accuracy but **fail to detect fraud** due to cla
 
 ---
 
-## Dataset
-- Total samples: **772**
-- Features: **30**
-- Target variable:
-  - `0` → Non-Fraud  
-  - `1` → Fraud
+## Dataset Summary
 
-### Class Distribution (Before Sampling)
-- Non-Fraud: **763**
-- Fraud: **9**
+| Property | Value |
+|--------|-------|
+| Total Samples | 772 |
+| Total Features | 30 |
+| Target Variable | Class (0 = Non-Fraud, 1 = Fraud) |
+| Fraud Samples | 9 |
+| Non-Fraud Samples | 763 |
 
 ---
 
 ## Methodology
-1. Stratified Train-Test Split  
-2. Feature Scaling  
-3. Sampling Technique:
-   - **SMOTE (Synthetic Minority Over-sampling Technique)**
-4. Model Used:
-   - **Logistic Regression**
-5. Evaluation Metrics:
-   - Precision, Recall, F1-score (focus on Fraud class)
+
+| Step | Description |
+|-----|------------|
+| Train-Test Split | Stratified split to preserve class ratio |
+| Scaling | StandardScaler |
+| Sampling | SMOTE (Synthetic Minority Over-sampling Technique) |
+| Model | Logistic Regression |
+| Metrics | Precision, Recall, F1-score |
 
 ---
 
 ## Key Results
-- Sampling significantly **improved recall for fraud detection**
-- Model learned meaningful fraud patterns instead of biasing toward majority class
-- Demonstrates why **accuracy alone is misleading** in imbalanced problems
+
+| Scenario | Fraud Recall | Fraud F1-score |
+|--------|--------------|----------------|
+| Before Sampling | Very Low | Poor |
+| After SMOTE | **Significantly Improved** | **Improved** |
+
+> ⚠️ Accuracy alone was misleading; recall and F1-score provided meaningful insights.
 
 ---
 
